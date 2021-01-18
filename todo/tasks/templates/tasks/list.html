@@ -3,7 +3,7 @@
 <style>
 
 	body{
-		background-color: #638CB8;
+		background-color: #000000;
 	}
 
 	input{
@@ -18,37 +18,44 @@
 	}
 
 	.submit{
-		background-color: #6BA3E8;
+		background-color: #0000cc;
 	}
 
 	.center-column{
 		width:600px;
 		margin: 20px auto;
 		padding:20px;
-		background-color: #fff;
+		background-color: #212121;
 		border-radius: 3px;
 		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
 	}
 
 	.item-row{
-		background-color: #906abd;
+		background-color: #ffb300;
 		margin: 10px;
 		padding: 20px;
 		border-radius: 3px;
-		color: #fff;
+		color: #000;
 		font-size: 16px;
 		box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
 	}
 
 	.btn-danger{
-		background-color: #ffae19;
+		background-color: #cc0000;
 		border-color: #e59400;
 	}
+
+h4{
+  font-family: Bradley Hand ITC !important;
+  font-size:43; 
+  color: white;
+  height:50px;
+}
 
 </style>
 
 <div class="center-column">
-
+<h4 align="center">Welcome to Taskify!</h4>
 	<form method="POST" action="/">
 		{% csrf_token %}
 		{{form.title}}
