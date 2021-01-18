@@ -1,8 +1,59 @@
-<p>Are you sure you want to delete "{{item}}"?</p>
+<style>
+body{
+		background-color: #000000;
+	}
+table
+{
+color:white;
+background-color:#212121;
+border-radius:8px;
+}
+#btn1
+{
+	background-color:red;
+	color:white;
+	height:40px;
+	width:100px;
+	border-radius:10px;
+	text-align:center;
+	display=block;
+	margin=auto;
+	
+}
+#btn2
+{
+	background-color:ffb300;
+	color:black;
+	height:40px;
+	width:100px;
+	border-radius:10px;
+	text-align:center;
+	display=block;
+	margin=auto;
+}
+.btn-danger
+{
+	background-color:red;
+	color:white;
+	height:400px;
+	width:100px;
+	border-radius:10px
 
-<a href="{% url 'list' %}" >Cancel</a>
-
-<form method="POST" action="">
+	}
+h2 {
+  font-family: Bahnschrift !important;
+}
+</style>
+<table align="center" cellspacing="25">
+<tr>
+<td><p><h2>Are you sure you want to delete "{{item}}"?</h2></p></td>
+<tr>
+<td>
+<form method="POST" action="" align="center">
 	{% csrf_token %}
-	<input type="submit" name="Confirm">
+	<input type="submit" name="confirm" id="btn1" value="Confirm">
+
+
+<a href="{% url 'list' %}" ><input type="submit" name="cancel" id="btn2" value="Cancel" ></a>
 </form>
+	</table>
